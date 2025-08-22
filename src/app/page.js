@@ -4,6 +4,8 @@ import FirstSection from "./component/firstSection/FirstSection";
 import Secondsec from "./component/secondSec/Secondsec";
 import Cards from "./component/cardsection/Cards";
 import Thirdsec from "./component/thirdsec/Thirdsec";
+import Pages from "./(pages)/t-shirt/page";
+import Forth from "./component/forthsec/Forth";
 
 
 export default function Home() {
@@ -13,6 +15,7 @@ export default function Home() {
  <Cards/>
  <Secondsec/>
  <Thirdsec/>
+  <Forth/>
   </>
   );
 }
