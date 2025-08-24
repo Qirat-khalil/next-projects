@@ -1,58 +1,40 @@
-"use client"
-import React from 'react';
 
-const Cards = () => {
-  
-  const cardData = [
-  
-    {
-      title: 'DENIM',
-      image: '/assets/images/image (1).png',
-      text: 'Shop the latest in denim styles.',
-    },
-  
-    {
-      title: 'DRESS PAINT',
-      image: '/assets/images/image (3).png',
-      text: 'Explore sweaters fashion ',
-    },
+"use client";
+import React from "react";
+import { useRouter } from "next/navigation";
 
-    {
-      title: 'WOMEN BOTTOMS',
-      image: '/assets/images/image (11).png',
-      text: 'Trendy collections of tees.',
-    },
-    {
-      title: 'DRESS PAINT',
-      image: '/assets/images/image (3).png',
-      text: 'Explore sweaters fashion ',
-    },
-     {
-      title: 'BROWN PAINT',
-      image: '/assets/images/image (12).png',
-      text: 'Explore sweaters fashion ',
-    },
-    
-  ];
+const Cards = ({ title = "", data = [] }) => {
+  const router = useRouter();
 
   return (
-    <div className="container mt-5">
-      <div className="text-center mb-4">
-        <h4>Shop Jeans Category</h4>
+    <div className="container mt-3">
+      <div className="text-center mb-4 mt-5">
+        <h4>{title}</h4>
       </div>
 
       <div className="row">
-        {cardData.map((card, index) => (
+        {data.map((card, index) => (
           <div className="col-md-6 col-lg-3 mb-4" key={index}>
-            <div className="card shadow h-100">
-              <img 
-                src={card.image} 
-                className="card-img-top" 
-                alt={card.title} 
+            <div className="card shadow h-100 text-center mt-3">
+              <img
+                src={card.image}
+                className="card-img-top"
+                alt={card.title}
+                style={{ height: "250px", objectFit: "cover", cursor: "pointer" }}
+                onClick={() => router.push(`/product/${card.id}`)}
               />
-              <div className="card-body">
+              <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{card.title}</h5>
                 <p className="card-text">{card.text}</p>
+                {card.price && <p className="fw-bold">PKR {card.price}</p>}
+                {card.price && (
+                  <button
+                    className="btn btn-primary mt-auto"
+                    onClick={() => console.log("Add to cart", card)}
+                  >
+                    Add to Cart
+                  </button>
+                )}
               </div>
             </div>
           </div>

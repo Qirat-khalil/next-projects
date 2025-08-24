@@ -1,21 +1,21 @@
-import Image from "next/image";
-import Header from "./component/header/Header";
 import FirstSection from "./component/firstSection/FirstSection";
-import Secondsec from "./component/secondSec/Secondsec";
-import Cards from "./component/cardsection/Cards";
+import Secondsec from "./component/secondsec/Secondsec";
 import Thirdsec from "./component/thirdsec/Thirdsec";
-import Pages from "./(pages)/t-shirt/page";
 import Forth from "./component/forthsec/Forth";
+import Cards from "./component/cardsection/Cards";
+import Firstprod from "./component/firstprod/Firstprod";
+import Products from "./component/productdata/Products";   
 
 
 export default function Home() {
   return (
-  <>
- <FirstSection/>
- <Cards/>
- <Secondsec/>
- <Thirdsec/>
-  <Forth/>
-  </>
+    <>
+      <FirstSection />
+      <Firstprod />
+      {/* <Cards title="Our Products" data={Products} /> */}
+      <Secondsec />
+      <Thirdsec />
+      <Forth />
+    </>
   );
 }
