@@ -1,10 +1,10 @@
 import FirstSection from "./component/firstSection/FirstSection";
-import Secondsec from "./component/secondsec/Secondsec";
 import Thirdsec from "./component/thirdsec/Thirdsec";
 import Forth from "./component/forthsec/Forth";
 import Cards from "./component/cardsection/Cards";
 import Firstprod from "./component/firstprod/Firstprod";
 import Products from "./component/productdata/Products";   
+import Secondsec from "./component/secondSec/Secondsec";
 
 
 export default function Home() {
