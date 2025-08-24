@@ -43,6 +43,11 @@ const Header = () => {
                 Jeans
               </Link>
             </li>
+             <li className="nav-item">
+              <Link href="/jeans" className="nav-link text-black">
+                About
+              </Link>
+            </li>
           </ul>
 
           <div className="d-flex gap-3 align-items-center">
