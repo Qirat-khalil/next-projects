@@ -46,17 +46,17 @@ const Header = () => {
           </ul>
 
           <div className="d-flex gap-3 align-items-center">
-            {/* Cart Icon */}
+
             <Link href="/cart" className="btn btn-outline-dark position-relative">
               <i className="fa-solid fa-cart-shopping"></i>
               <span
                 className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
               >
-                0 {/* yahan dynamically cart items ka number aayega */}
+                0
               </span>
             </Link>
 
-            {/* Signup/Login */}
+
             <Link href="/auth/signup" className="btn btn-outline-dark">
               Signup
             </Link>

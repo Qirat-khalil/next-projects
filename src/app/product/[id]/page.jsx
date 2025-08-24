@@ -1,13 +1,13 @@
 "use client";
 import { useParams } from "next/navigation";
-import Products from "../../component/productdata/Products"; // ✅ correct path
+import Products from "../../component/productdata/Products"; 
 
 export default function ProductDetail() {
   const { id } = useParams();
   const product = Products.find((p) => p.id == id);
 
   if (!product) {
-    return <div className="text-center mt-10">❌ Product not found</div>;
+    return <div className="text-center mt-10"> Product not found</div>;
   }
 
   return (
@@ -25,7 +25,7 @@ export default function ProductDetail() {
           <p className="text-gray-600 mt-2">{product.text}</p>
           <h4 className="text-xl text-green-600 mt-4">PKR {product.price}</h4>
           <button className="mt-6 px-6 py-2 bg-black text-white rounded-lg shadow hover:bg-gray-800">
-            🛒 Add to Cart
+             Add to Cart
           </button>
         </div>
       </div>
