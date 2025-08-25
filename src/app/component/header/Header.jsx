@@ -4,13 +4,13 @@ import "./Header.css";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-
 const Header = () => {
  
   const navItemVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     hover: { scale: 1.1 }, 
+    
   };
 
   const buttonVariants = {
