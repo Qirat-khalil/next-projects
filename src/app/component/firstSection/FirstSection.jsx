@@ -1,9 +1,24 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const FirstSection = () => {
+ 
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } },
+    hover: { scale: 1.05 },
+  };
+
   return (
     <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
-      {/* Carousel Indicators */}
+    
       <div className="carousel-indicators">
         <button
           type="button"
@@ -21,9 +36,9 @@ const FirstSection = () => {
         ></button>
       </div>
 
-      {/* Carousel Inner */}
+
       <div className="carousel-inner">
-        {/* Slide 1 */}
+
         <div className="carousel-item active">
           <div
             className="d-flex align-items-center"
@@ -39,23 +54,44 @@ const FirstSection = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 d-flex flex-column justify-content-center text-center text-md-start">
-                  <h1 className="display-4 fw-bold">Your Cozy Era</h1>
-                  <p className="lead">
+                  <motion.h1
+                    className="display-4 fw-bold"
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
+                  >
+                    Your Cozy Era
+                  </motion.h1>
+                  <motion.p
+                    className="lead"
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ delay: 0.3 }}
+                  >
                     Get peak comfy-chic with new winter essentials.
-                  </p>
-                  <button
-                    className="btn btn-light px-4 py-2 mt-3"
-                    style={{ borderRadius: "0", minWidth: "150px" }}
+                  </motion.p>
+                  <motion.button
+                    className="btn btn-light mt-3"
+                    style={{
+                      borderRadius: "0",
+                      Width: "50px", 
+                      padding: "0.3rem 0.5rem", 
+                    }}
+                    variants={buttonVariants}
+                    initial="hidden"
+                    animate="visible"
+                    whileHover="hover"
                   >
                     SHOP NOW
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Slide 2 */}
+     
         <div className="carousel-item">
           <div
             className="d-flex align-items-center"
@@ -71,14 +107,37 @@ const FirstSection = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 d-flex flex-column justify-content-center text-center text-md-start">
-                  <h1 className="display-4 fw-bold">New Collection</h1>
-                  <p className="lead">Stay stylish and warm this season.</p>
-                  <button
-                    className="btn btn-light px-4 py-2 mt-3"
-                    style={{ borderRadius: "0", minWidth: "150px" }}
+                  <motion.h1
+                    className="display-4 fw-bold"
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
+                  >
+                    New Collection
+                  </motion.h1>
+                  <motion.p
+                    className="lead"
+                    variants={textVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ delay: 0.3 }}
+                  >
+                    Stay stylish and warm this season.
+                  </motion.p>
+                  <motion.button
+                    className="btn btn-light mt-3"
+                    style={{
+                      borderRadius: "0",
+                      minWidth: "100px", 
+                      padding: "0.3rem 0.7rem", 
+                    }}
+                    variants={buttonVariants}
+                    initial="hidden"
+                    animate="visible"
+                    whileHover="hover"
                   >
                     SHOP NOW
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             </div>
@@ -86,7 +145,6 @@ const FirstSection = () => {
         </div>
       </div>
 
-      {/* Controls */}
       <button
         className="carousel-control-prev"
         type="button"

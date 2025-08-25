@@ -1,7 +1,10 @@
-.navv{
-    background-color: rgb(240, 213, 180);
-}
-.ul-li{
 
-    margin-left: 85px;
+.nav-link-custom {
+  font-size: 1.1rem; 
+    font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-link-custom:hover {
+  color: #6c7788 !important; 
 }
