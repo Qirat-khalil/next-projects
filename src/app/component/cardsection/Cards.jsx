@@ -2,6 +2,9 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import StarRating from "../rating/StarRating";
+
+
 
 const Cards = ({ title = "", data = [] }) => {
   const router = useRouter();
@@ -49,6 +52,7 @@ const Cards = ({ title = "", data = [] }) => {
                 <p className="card-text" style={{ fontSize: "0.85rem" }}>
                   {card.text}
                 </p>
+                {card.rating && <StarRating rating={card.rating} />}
                 {card.price && (
                   <p className="fw-bold" style={{ fontSize: "0.9rem" }}>
                     PKR {card.price}
